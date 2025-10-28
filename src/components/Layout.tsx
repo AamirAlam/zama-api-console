@@ -18,10 +18,20 @@ export function Layout() {
 
   return (
     <div>
-      <nav style={{ padding: '20px', borderBottom: '1px solid #ccc', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <nav
+        style={{
+          padding: '20px',
+          borderBottom: '1px solid #ccc',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
+      >
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <h1 style={{ display: 'inline-block', marginRight: '40px' }}>ZAMA API Console</h1>
-          {navigation.map((item) => {
+          <h1 style={{ display: 'inline-block', marginRight: '40px' }}>
+            ZAMA API Console
+          </h1>
+          {navigation.map(item => {
             const isActive = location.pathname === item.path
             return (
               <Link
@@ -31,7 +41,7 @@ export function Layout() {
                   marginRight: '20px',
                   textDecoration: 'none',
                   color: isActive ? '#000' : '#666',
-                  fontWeight: isActive ? 'bold' : 'normal'
+                  fontWeight: isActive ? 'bold' : 'normal',
                 }}
               >
                 {item.name}
@@ -39,7 +49,7 @@ export function Layout() {
             )
           })}
         </div>
-        
+
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
           <span style={{ fontSize: '14px', color: '#666' }}>
             Welcome, {user?.name}
@@ -52,7 +62,7 @@ export function Layout() {
               border: '1px solid #d1d5db',
               borderRadius: '4px',
               cursor: 'pointer',
-              fontSize: '14px'
+              fontSize: '14px',
             }}
           >
             Logout

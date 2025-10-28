@@ -13,30 +13,30 @@ const API_KEYS_STORAGE_KEY = 'apiKeys'
 
 const generateApiKey = (): string => {
   const prefix = 'sk_live_'
-  const randomPart = Math.random().toString(36).substring(2, 15) + 
-                    Math.random().toString(36).substring(2, 15)
+  const randomPart =
+    Math.random().toString(36).substring(2, 15) +
+    Math.random().toString(36).substring(2, 15)
   return prefix + randomPart
 }
-
 
 export function useApiKeys() {
   const [apiKeys, setApiKeys] = useState<ApiKey[]>([])
   const [isLoading, setIsLoading] = useState(true)
   const [isOperating, setIsOperating] = useState(false)
 
-  
   useEffect(() => {
     const loadApiKeys = () => {
       try {
         const stored = localStorage.getItem(API_KEYS_STORAGE_KEY)
-        
-        if (stored) {
-          setApiKeys(JSON.parse(stored))
-        } 
 
+        if (stored) {
+          const parsed = JSON.parse(stored) as ApiKey[]
+          if (parsed && Array.isArray(parsed)) {
+            setApiKeys(parsed)
+          }
+        }
       } catch (error) {
         console.error('Error loading API keys:', error)
-   
       } finally {
         setIsLoading(false)
       }
@@ -44,7 +44,6 @@ export function useApiKeys() {
 
     loadApiKeys()
   }, [])
-
 
   // update api keys in local storage when apiKeys changes
   useEffect(() => {
@@ -60,9 +59,8 @@ export function useApiKeys() {
     }
 
     setIsOperating(true)
-    
+
     try {
-      
       await new Promise(resolve => setTimeout(resolve, 1500))
 
       const newKey: ApiKey = {
@@ -70,7 +68,7 @@ export function useApiKeys() {
         name: name.trim(),
         key: generateApiKey(),
         created: new Date().toISOString().split('T')[0],
-        status: 'active'
+        status: 'active',
       }
 
       setApiKeys(prev => [...prev, newKey])
@@ -82,16 +80,21 @@ export function useApiKeys() {
 
   const regenerateKey = async (id: string): Promise<void> => {
     setIsOperating(true)
-    
+
     try {
-      
       await new Promise(resolve => setTimeout(resolve, 1200))
 
-      setApiKeys(prev => prev.map(key => 
-        key.id === id 
-          ? { ...key, key: generateApiKey(), created: new Date().toISOString().split('T')[0] }
-          : key
-      ))
+      setApiKeys(prev =>
+        prev.map(key =>
+          key.id === id
+            ? {
+                ...key,
+                key: generateApiKey(),
+                created: new Date().toISOString().split('T')[0],
+              }
+            : key
+        )
+      )
     } finally {
       setIsOperating(false)
     }
@@ -99,14 +102,15 @@ export function useApiKeys() {
 
   const revokeKey = async (id: string): Promise<void> => {
     setIsOperating(true)
-    
+
     try {
-      
       await new Promise(resolve => setTimeout(resolve, 800))
 
-      setApiKeys(prev => prev.map(key => 
-        key.id === id ? { ...key, status: 'revoked' as const } : key
-      ))
+      setApiKeys(prev =>
+        prev.map(key =>
+          key.id === id ? { ...key, status: 'revoked' as const } : key
+        )
+      )
     } finally {
       setIsOperating(false)
     }
@@ -114,9 +118,8 @@ export function useApiKeys() {
 
   const deleteKey = async (id: string): Promise<void> => {
     setIsOperating(true)
-    
+
     try {
-      
       await new Promise(resolve => setTimeout(resolve, 600))
 
       setApiKeys(prev => prev.filter(key => key.id !== id))
@@ -147,6 +150,6 @@ export function useApiKeys() {
     deleteKey,
     getApiKey,
     getActiveApiKeys,
-    getRevokedApiKeys
+    getRevokedApiKeys,
   }
 }

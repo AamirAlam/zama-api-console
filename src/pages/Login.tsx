@@ -8,7 +8,9 @@ export function Login() {
   const location = useLocation()
 
   if (isAuthenticated) {
-    const from = (location.state as any)?.from?.pathname || '/'
+    const from =
+      (location.state as { from?: { pathname?: string } })?.from?.pathname ||
+      '/'
     return <Navigate to={from} replace />
   }
 
@@ -17,6 +19,8 @@ export function Login() {
     try {
       await login()
     } catch (error) {
+      // Todo: display toast message on error
+      // eslint-disable-next-line no-console
       console.error('Login failed:', error)
     } finally {
       setLoginLoading(false)
@@ -52,7 +56,7 @@ export function Login() {
                 Continue as a guest to explore the API console
               </p>
               <button
-                onClick={handleGuestLogin}
+                onClick={() => void handleGuestLogin()}
                 disabled={loginLoading}
                 className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed"
               >
@@ -67,15 +71,13 @@ export function Login() {
               </button>
             </div>
           </div>
-          
+
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
                 <div className="w-full border-t border-gray-300" />
               </div>
-           
             </div>
-           
           </div>
         </div>
       </div>
