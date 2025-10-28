@@ -1,6 +1,4 @@
-
 export function Docs() {
-
   return (
     <div>
       <div className="mb-8">

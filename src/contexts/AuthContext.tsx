@@ -31,7 +31,7 @@ const TOKEN_KEY = 'zama_auth_token'
 const generateMockToken = (): AuthToken => {
   const now = Date.now()
   const expiresIn = 3600 // 1 hour in seconds
-  const expiresAt = now + (expiresIn * 1000)
+  const expiresAt = now + expiresIn * 1000
 
   return {
     access_token: `mock_token_${Math.random().toString(36).substr(2, 9)}_${now}`,
@@ -41,8 +41,8 @@ const generateMockToken = (): AuthToken => {
     user: {
       id: 'guest_user',
       email: 'guest@zama.ai',
-      name: 'Guest User'
-    }
+      name: 'Guest User',
+    },
   }
 }
 
@@ -62,9 +62,9 @@ export function AuthProvider({ children }: AuthProviderProps) {
   useEffect(() => {
     const checkExistingAuth = () => {
       try {
-        const storedToken = localStorage.getItem(TOKEN_KEY)
+        const storedToken: string | null = localStorage.getItem(TOKEN_KEY)
         if (storedToken) {
-          const token: AuthToken = JSON.parse(storedToken)
+          const token = JSON.parse(storedToken) as AuthToken
           if (isTokenValid(token)) {
             setUser(token.user)
           } else {
@@ -86,9 +86,8 @@ export function AuthProvider({ children }: AuthProviderProps) {
   const login = async (): Promise<void> => {
     setIsLoading(true)
     try {
-     
       await new Promise(resolve => setTimeout(resolve, 1000))
-      
+
       const token = generateMockToken()
       localStorage.setItem(TOKEN_KEY, JSON.stringify(token))
       setUser(token.user)
@@ -110,14 +109,10 @@ export function AuthProvider({ children }: AuthProviderProps) {
     isAuthenticated: !!user,
     isLoading,
     login,
-    logout
+    logout,
   }
 
-  return (
-    <AuthContext.Provider value={value}>
-      {children}
-    </AuthContext.Provider>
-  )
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
 }
 
 export function useAuth(): AuthContextType {
