@@ -63,7 +63,10 @@ export function ApiKeys() {
               Manage your API keys for accessing our services.
             </p>
           </div>
-          <Button onClick={() => setShowCreateForm(true)}>
+          <Button
+            data-testid="create-api-key-button"
+            onClick={() => setShowCreateForm(true)}
+          >
             <Plus className="h-4 w-4 mr-2" />
             Create API Key
           </Button>
@@ -85,6 +88,7 @@ export function ApiKeys() {
               className="flex-1 rounded-md border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
             />
             <Button
+              data-testid="create-api-key-submit"
               onClick={() => void handleCreateApiKey()}
               disabled={!newKeyName.trim() || isOperating}
             >

@@ -1,5 +1,6 @@
 import { Link, useLocation, Outlet } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
+import { Button } from './ui/button'
 
 const navigation = [
   { name: 'Dashboard', path: '/' },
@@ -54,19 +55,9 @@ export function Layout() {
           <span style={{ fontSize: '14px', color: '#666' }}>
             Welcome, {user?.name}
           </span>
-          <button
-            onClick={handleLogout}
-            style={{
-              padding: '8px 16px',
-              backgroundColor: '#f3f4f6',
-              border: '1px solid #d1d5db',
-              borderRadius: '4px',
-              cursor: 'pointer',
-              fontSize: '14px',
-            }}
-          >
+          <Button onClick={handleLogout} variant="outline">
             Logout
-          </button>
+          </Button>
         </div>
       </nav>
 
