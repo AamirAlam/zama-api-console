@@ -47,3 +47,22 @@ test('protected routes redirect to login when not authenticated', async ({
     await expect(page.getByTestId('signin-page')).toBeVisible()
   }
 })
+
+test('authenticated user can access protected routes', async ({ page }) => {
+  await page.goto('/')
+  await expect(page.getByTestId('signin-page')).toBeVisible()
+  await page.getByTestId('guest-signin').click()
+
+  // Verify login success
+  await expect(page).toHaveURL('/')
+  await expect(page.getByText('Welcome, Guest User')).toBeVisible()
+
+  // Access protected routes
+  const protectedRoutes = ['/', '/api-keys', '/usage', '/docs']
+
+  for (const route of protectedRoutes) {
+    await page.goto(route)
+    await expect(page).toHaveURL(route)
+    await expect(page.getByText('Welcome, Guest User')).toBeVisible()
+  }
+})
