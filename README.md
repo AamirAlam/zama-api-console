@@ -187,7 +187,7 @@ npm run type-check
 - **Vite** - Fast build tool and dev server
 - **Tailwind CSS** - Utility-first CSS framework
 - **Lucide React** - Beautiful icon library
-- ""Shadcn UI"" - Reusable UI components
+- **Shadcn UI** - Reusable UI components
 
 ## Deployment
 
