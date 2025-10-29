@@ -54,7 +54,7 @@ pnpm dev
 
 ### Login Credentials
 
-Use any email/password combination to access the application (authentication is simulated for demo purposes).
+Use guest login button to access the application (authentication is simulated for demo purposes).
 
 ## Data & Synthetic Data Generation
 
