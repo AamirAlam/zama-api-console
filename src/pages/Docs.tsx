@@ -48,6 +48,44 @@ export function Docs() {
         </div>
       </div>
 
+      <div className="bg-white shadow rounded-lg p-6">
+        <h3 className="text-lg font-medium text-gray-900 mb-4">Rate Limits</h3>
+        <div className="grid md:grid-cols-2 gap-4">
+          {[
+            {
+              name: 'Free Tier',
+              daily: '1,000',
+              hourly: '100',
+              perMinute: '10',
+            },
+            {
+              name: 'Pro Tier',
+              daily: '100,000',
+              hourly: '10,000',
+              perMinute: '1,000',
+            },
+          ].map((rate, index) => (
+            <div key={index} className="bg-gray-50 rounded-lg p-4">
+              <h4 className="font-medium mb-3">{rate.name}</h4>
+              <div className="space-y-2 text-sm text-gray-600">
+                <div className="flex justify-between">
+                  <span>Daily requests:</span>
+                  <span className="font-medium">{rate.daily}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Hourly requests:</span>
+                  <span className="font-medium">{rate.hourly}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Per minute:</span>
+                  <span className="font-medium">{rate.perMinute}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <div className="grid lg:grid-cols-2 gap-6 mb-8">
         <div className="bg-white shadow rounded-lg p-6">
           <div className="flex items-center gap-3 mb-4">
@@ -151,44 +189,6 @@ export function Docs() {
               />
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="bg-white shadow rounded-lg p-6">
-        <h3 className="text-lg font-medium text-gray-900 mb-4">Rate Limits</h3>
-        <div className="grid md:grid-cols-2 gap-4">
-          {[
-            {
-              name: 'Free Tier',
-              daily: '1,000',
-              hourly: '100',
-              perMinute: '10',
-            },
-            {
-              name: 'Pro Tier',
-              daily: '100,000',
-              hourly: '10,000',
-              perMinute: '1,000',
-            },
-          ].map((rate, index) => (
-            <div key={index} className="bg-gray-50 rounded-lg p-4">
-              <h4 className="font-medium mb-3">{rate.name}</h4>
-              <div className="space-y-2 text-sm text-gray-600">
-                <div className="flex justify-between">
-                  <span>Daily requests:</span>
-                  <span className="font-medium">{rate.daily}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Hourly requests:</span>
-                  <span className="font-medium">{rate.hourly}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Per minute:</span>
-                  <span className="font-medium">{rate.perMinute}</span>
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
     </div>
