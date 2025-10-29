@@ -1,0 +1,462 @@
+{
+  "dailyUsage": [
+    {
+      "date": "2024-10-01",
+      "requests": 1250,
+      "status_codes": {
+        "200": 1180,
+        "400": 35,
+        "401": 20,
+        "500": 15
+      },
+      "api_keys": {
+        "sk_live_abc123": 450,
+        "sk_live_def456": 380,
+        "sk_live_ghi789": 420
+      }
+    },
+    {
+      "date": "2024-10-02",
+      "requests": 1420,
+      "status_codes": {
+        "200": 1350,
+        "400": 40,
+        "401": 18,
+        "500": 12
+      },
+      "api_keys": {
+        "sk_live_abc123": 520,
+        "sk_live_def456": 440,
+        "sk_live_ghi789": 460
+      }
+    },
+    {
+      "date": "2024-10-03",
+      "requests": 1180,
+      "status_codes": {
+        "200": 1120,
+        "400": 30,
+        "401": 15,
+        "500": 15
+      },
+      "api_keys": {
+        "sk_live_abc123": 400,
+        "sk_live_def456": 380,
+        "sk_live_ghi789": 400
+      }
+    },
+    {
+      "date": "2024-10-04",
+      "requests": 1650,
+      "status_codes": {
+        "200": 1580,
+        "400": 35,
+        "401": 20,
+        "500": 15
+      },
+      "api_keys": {
+        "sk_live_abc123": 600,
+        "sk_live_def456": 520,
+        "sk_live_ghi789": 530
+      }
+    },
+    {
+      "date": "2024-10-05",
+      "requests": 890,
+      "status_codes": {
+        "200": 845,
+        "400": 25,
+        "401": 12,
+        "500": 8
+      },
+      "api_keys": {
+        "sk_live_abc123": 320,
+        "sk_live_def456": 280,
+        "sk_live_ghi789": 290
+      }
+    },
+    {
+      "date": "2024-10-06",
+      "requests": 750,
+      "status_codes": {
+        "200": 715,
+        "400": 20,
+        "401": 10,
+        "500": 5
+      },
+      "api_keys": {
+        "sk_live_abc123": 270,
+        "sk_live_def456": 240,
+        "sk_live_ghi789": 240
+      }
+    },
+    {
+      "date": "2024-10-07",
+      "requests": 1320,
+      "status_codes": {
+        "200": 1260,
+        "400": 30,
+        "401": 18,
+        "500": 12
+      },
+      "api_keys": {
+        "sk_live_abc123": 480,
+        "sk_live_def456": 420,
+        "sk_live_ghi789": 420
+      }
+    },
+    {
+      "date": "2024-10-08",
+      "requests": 1580,
+      "status_codes": {
+        "200": 1510,
+        "400": 35,
+        "401": 20,
+        "500": 15
+      },
+      "api_keys": {
+        "sk_live_abc123": 580,
+        "sk_live_def456": 500,
+        "sk_live_ghi789": 500
+      }
+    },
+    {
+      "date": "2024-10-09",
+      "requests": 1450,
+      "status_codes": {
+        "200": 1380,
+        "400": 40,
+        "401": 18,
+        "500": 12
+      },
+      "api_keys": {
+        "sk_live_abc123": 530,
+        "sk_live_def456": 460,
+        "sk_live_ghi789": 460
+      }
+    },
+    {
+      "date": "2024-10-10",
+      "requests": 1720,
+      "status_codes": {
+        "200": 1640,
+        "400": 45,
+        "401": 20,
+        "500": 15
+      },
+      "api_keys": {
+        "sk_live_abc123": 630,
+        "sk_live_def456": 550,
+        "sk_live_ghi789": 540
+      }
+    },
+    {
+      "date": "2024-10-11",
+      "requests": 1280,
+      "status_codes": {
+        "200": 1220,
+        "400": 30,
+        "401": 18,
+        "500": 12
+      },
+      "api_keys": {
+        "sk_live_abc123": 470,
+        "sk_live_def456": 405,
+        "sk_live_ghi789": 405
+      }
+    },
+    {
+      "date": "2024-10-12",
+      "requests": 980,
+      "status_codes": {
+        "200": 930,
+        "400": 25,
+        "401": 15,
+        "500": 10
+      },
+      "api_keys": {
+        "sk_live_abc123": 360,
+        "sk_live_def456": 310,
+        "sk_live_ghi789": 310
+      }
+    },
+    {
+      "date": "2024-10-13",
+      "requests": 820,
+      "status_codes": {
+        "200": 780,
+        "400": 22,
+        "401": 12,
+        "500": 6
+      },
+      "api_keys": {
+        "sk_live_abc123": 300,
+        "sk_live_def456": 260,
+        "sk_live_ghi789": 260
+      }
+    },
+    {
+      "date": "2024-10-14",
+      "requests": 1520,
+      "status_codes": {
+        "200": 1450,
+        "400": 35,
+        "401": 20,
+        "500": 15
+      },
+      "api_keys": {
+        "sk_live_abc123": 560,
+        "sk_live_def456": 480,
+        "sk_live_ghi789": 480
+      }
+    },
+    {
+      "date": "2024-10-15",
+      "requests": 1680,
+      "status_codes": {
+        "200": 1600,
+        "400": 40,
+        "401": 25,
+        "500": 15
+      },
+      "api_keys": {
+        "sk_live_abc123": 620,
+        "sk_live_def456": 530,
+        "sk_live_ghi789": 530
+      }
+    },
+    {
+      "date": "2024-10-16",
+      "requests": 1420,
+      "status_codes": {
+        "200": 1350,
+        "400": 35,
+        "401": 20,
+        "500": 15
+      },
+      "api_keys": {
+        "sk_live_abc123": 520,
+        "sk_live_def456": 450,
+        "sk_live_ghi789": 450
+      }
+    },
+    {
+      "date": "2024-10-17",
+      "requests": 1580,
+      "status_codes": {
+        "200": 1510,
+        "400": 35,
+        "401": 20,
+        "500": 15
+      },
+      "api_keys": {
+        "sk_live_abc123": 580,
+        "sk_live_def456": 500,
+        "sk_live_ghi789": 500
+      }
+    },
+    {
+      "date": "2024-10-18",
+      "requests": 1750,
+      "status_codes": {
+        "200": 1670,
+        "400": 40,
+        "401": 25,
+        "500": 15
+      },
+      "api_keys": {
+        "sk_live_abc123": 640,
+        "sk_live_def456": 555,
+        "sk_live_ghi789": 555
+      }
+    },
+    {
+      "date": "2024-10-19",
+      "requests": 980,
+      "status_codes": {
+        "200": 930,
+        "400": 25,
+        "401": 15,
+        "500": 10
+      },
+      "api_keys": {
+        "sk_live_abc123": 360,
+        "sk_live_def456": 310,
+        "sk_live_ghi789": 310
+      }
+    },
+    {
+      "date": "2024-10-20",
+      "requests": 850,
+      "status_codes": {
+        "200": 810,
+        "400": 22,
+        "401": 12,
+        "500": 6
+      },
+      "api_keys": {
+        "sk_live_abc123": 310,
+        "sk_live_def456": 270,
+        "sk_live_ghi789": 270
+      }
+    },
+    {
+      "date": "2024-10-21",
+      "requests": 1620,
+      "status_codes": {
+        "200": 1540,
+        "400": 40,
+        "401": 25,
+        "500": 15
+      },
+      "api_keys": {
+        "sk_live_abc123": 590,
+        "sk_live_def456": 515,
+        "sk_live_ghi789": 515
+      }
+    },
+    {
+      "date": "2024-10-22",
+      "requests": 1480,
+      "status_codes": {
+        "200": 1410,
+        "400": 35,
+        "401": 20,
+        "500": 15
+      },
+      "api_keys": {
+        "sk_live_abc123": 540,
+        "sk_live_def456": 470,
+        "sk_live_ghi789": 470
+      }
+    },
+    {
+      "date": "2024-10-23",
+      "requests": 1720,
+      "status_codes": {
+        "200": 1640,
+        "400": 40,
+        "401": 25,
+        "500": 15
+      },
+      "api_keys": {
+        "sk_live_abc123": 630,
+        "sk_live_def456": 545,
+        "sk_live_ghi789": 545
+      }
+    },
+    {
+      "date": "2024-10-24",
+      "requests": 1380,
+      "status_codes": {
+        "200": 1310,
+        "400": 35,
+        "401": 20,
+        "500": 15
+      },
+      "api_keys": {
+        "sk_live_abc123": 500,
+        "sk_live_def456": 440,
+        "sk_live_ghi789": 440
+      }
+    },
+    {
+      "date": "2024-10-25",
+      "requests": 1650,
+      "status_codes": {
+        "200": 1570,
+        "400": 40,
+        "401": 25,
+        "500": 15
+      },
+      "api_keys": {
+        "sk_live_abc123": 600,
+        "sk_live_def456": 525,
+        "sk_live_ghi789": 525
+      }
+    },
+    {
+      "date": "2024-10-26",
+      "requests": 920,
+      "status_codes": {
+        "200": 875,
+        "400": 25,
+        "401": 12,
+        "500": 8
+      },
+      "api_keys": {
+        "sk_live_abc123": 340,
+        "sk_live_def456": 290,
+        "sk_live_ghi789": 290
+      }
+    },
+    {
+      "date": "2024-10-27",
+      "requests": 780,
+      "status_codes": {
+        "200": 745,
+        "400": 20,
+        "401": 10,
+        "500": 5
+      },
+      "api_keys": {
+        "sk_live_abc123": 290,
+        "sk_live_def456": 245,
+        "sk_live_ghi789": 245
+      }
+    },
+    {
+      "date": "2024-10-28",
+      "requests": 1590,
+      "status_codes": {
+        "200": 1510,
+        "400": 40,
+        "401": 25,
+        "500": 15
+      },
+      "api_keys": {
+        "sk_live_abc123": 580,
+        "sk_live_def456": 505,
+        "sk_live_ghi789": 505
+      }
+    },
+    {
+      "date": "2024-10-29",
+      "requests": 1460,
+      "status_codes": {
+        "200": 1390,
+        "400": 35,
+        "401": 20,
+        "500": 15
+      },
+      "api_keys": {
+        "sk_live_abc123": 530,
+        "sk_live_def456": 465,
+        "sk_live_ghi789": 465
+      }
+    }
+  ],
+  "apiKeys": [
+    {
+      "id": "sk_live_abc123",
+      "name": "Production API Key",
+      "created": "2024-09-15",
+      "lastUsed": "2024-10-14",
+      "status": "active"
+    },
+    {
+      "id": "sk_live_def456",
+      "name": "Development API Key",
+      "created": "2024-09-20",
+      "lastUsed": "2024-10-14",
+      "status": "active"
+    },
+    {
+      "id": "sk_live_ghi789",
+      "name": "Testing API Key",
+      "created": "2024-09-25",
+      "lastUsed": "2024-10-14",
+      "status": "active"
+    }
+  ]
+}
