@@ -32,7 +32,8 @@ function App() {
               <Route path="docs" element={<Docs />} />
             </Route>
           </Routes>
-          {import.meta.env.VITE_NODE_ENV === 'development' && <DevPanel />}
+          {(import.meta.env.VITE_NODE_ENV === 'development' ||
+            import.meta.env.DEV) && <DevPanel />}
         </Router>
       </AuthProvider>
     </FeatureFlagsProvider>

@@ -88,9 +88,7 @@ export function Usage() {
         </div>
       </div>
 
-      <div
-        className={`grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-8 ${flags.compactLayout ? 'gap-3 mb-6' : ''}`}
-      >
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 mb-8">
         <StatCard
           title="Total Requests"
           iconComponent={TrendingUp}

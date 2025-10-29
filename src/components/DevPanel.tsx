@@ -32,11 +32,15 @@ export function DevPanel() {
           onClick={() => setIsOpen(!isOpen)}
           className="rounded-full w-12 h-12 shadow-lg bg-blue-600 hover:bg-blue-700"
           size="sm"
+          data-testid="dev-panel-toggle"
         >
           <Settings className="h-5 w-5" />
         </Button>
         {activeFlags > 0 && (
-          <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center font-bold">
+          <div
+            className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center font-bold"
+            data-testid="active-flags-counter"
+          >
             {activeFlags}
           </div>
         )}
@@ -44,7 +48,10 @@ export function DevPanel() {
 
       {/* Dev Panel */}
       {isOpen && (
-        <div className="fixed bottom-20 right-4 w-80 bg-white border border-gray-200 rounded-lg shadow-xl z-50 max-h-96 overflow-hidden">
+        <div
+          className="fixed bottom-20 right-4 w-80 bg-white border border-gray-200 rounded-lg shadow-xl z-50 max-h-96 overflow-hidden"
+          data-testid="dev-panel"
+        >
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-gray-50">
             <div className="flex items-center gap-2">
@@ -60,6 +67,7 @@ export function DevPanel() {
                 variant="outline"
                 size="sm"
                 className="h-8"
+                data-testid="reset-flags-button"
               >
                 <RotateCcw className="h-3 w-3" />
               </Button>
@@ -68,6 +76,7 @@ export function DevPanel() {
                 variant="outline"
                 size="sm"
                 className="h-8"
+                data-testid="close-panel-button"
               >
                 <X className="h-3 w-3" />
               </Button>
@@ -80,7 +89,10 @@ export function DevPanel() {
               <div key={feature.key} className="space-y-2">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <label className="flex items-center cursor-pointer">
+                    <label
+                      className="flex items-center cursor-pointer"
+                      data-testid={`feature-toggle-${feature.key}`}
+                    >
                       <input
                         type="checkbox"
                         checked={flags[feature.key]}
