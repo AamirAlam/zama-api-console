@@ -270,4 +270,16 @@ I used `vitest` and `playwright` for testing. `vitest` is a lightweight testing 
 - **Data Persistence** - Backend API integration
 - **Advanced Charts** - More visualization types and interactive features
 
+## AI Coding Assistance
+
+### What Worked Well
+
+- **Code Consistency**: Helped maintain consistent patterns across similar components (e.g., matching test file styles)
+- **Documentation**: Efficient at creating comprehensive README sections and code comments
+
+### What Did Not Work Well
+
+- **Complex State Logic**: Required manual refinement of feature flag context and state management
+- **Environment Configuration**: Needed iterative debugging for Playwright environment variable setup
+
 ---
