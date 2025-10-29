@@ -53,6 +53,7 @@ export function ApiKeyCard({
             <Button
               variant="ghost"
               size="icon-sm"
+              data-testid="toggle-key-visibility"
               onClick={toggleKeyVisibility}
             >
               {isVisible ? (
@@ -64,6 +65,7 @@ export function ApiKeyCard({
             <Button
               variant="ghost"
               size="icon-sm"
+              data-testid="copy-key"
               onClick={() => onCopyToClipboard(apiKey.key)}
             >
               <Copy className="h-4 w-4" />
@@ -81,6 +83,7 @@ export function ApiKeyCard({
               <Button
                 variant="outline"
                 size="sm"
+                data-testid="regenerate-key"
                 onClick={() => void onRegenerateKey(apiKey.id)}
                 disabled={isOperating}
               >
@@ -90,6 +93,7 @@ export function ApiKeyCard({
               <Button
                 variant="outline"
                 size="sm"
+                data-testid="revoke-key"
                 onClick={() => void onRevokeKey(apiKey.id)}
                 disabled={isOperating}
               >
@@ -100,6 +104,7 @@ export function ApiKeyCard({
           <Button
             variant="outline"
             size="sm"
+            data-testid="delete-key"
             onClick={() => void onDeleteKey(apiKey.id)}
             disabled={isOperating}
           >
