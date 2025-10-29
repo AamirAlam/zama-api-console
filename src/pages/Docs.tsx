@@ -1,62 +1,62 @@
-import { Code, Terminal } from 'lucide-react'
+import { Code, Terminal, Zap, Globe } from 'lucide-react'
 import { CodeBlock } from '../components/CodeBlock'
 import { codeExamples } from '../data/codeExamples'
 
 export function Docs() {
   return (
-    <div className="max-w-4xl mx-auto">
-      <div className="mb-12 text-center">
-        <h1 className="text-3xl font-bold mb-4">API Documentation</h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Simple, powerful API integration. Get started in minutes with our
-          comprehensive guides and examples.
-        </p>
+    <div>
+      <div className="mb-8">
+        <div className="flex justify-between">
+          <div>
+            <p className="mt-2 text-sm text-gray-600">
+              Simple, powerful API integration. Get started in minutes with our
+              comprehensive guides and examples.
+            </p>
+          </div>
+          <div></div>
+        </div>
       </div>
 
-      <div className="mb-12">
-        <div className="border rounded-xl p-8">
-          <div className="flex items-center gap-3 mb-6">
-            <Terminal className="h-6 w-6 text-blue-600" />
-            <h2 className="text-xl font-semibold">Quick Start</h2>
-          </div>
-          <p className="text-gray-700 mb-6">
-            Get your API key and start making requests in under 5 minutes.
-          </p>
+      <div className="bg-white shadow rounded-lg p-6 mb-8">
+        <div className="flex items-center gap-3 mb-4">
+          <Zap className="h-5 w-5 text-blue-600" />
+          <h2 className="text-lg font-medium text-gray-900">Quick Start</h2>
+        </div>
+        <p className="text-sm text-gray-600 mb-4">
+          Get your API key and start making requests in under 5 minutes.
+        </p>
 
-          <div className="bg-white rounded-lg p-4 mb-6 border">
-            <div className="flex items-center gap-3 mb-2">
-              <Terminal className="h-5 w-5 text-blue-600" />
-              <span className="font-medium">Base URL</span>
+        <div className="grid md:grid-cols-2 gap-4">
+          <div className="bg-gray-50 rounded-lg p-4">
+            <div className="flex items-center gap-2 mb-2">
+              <Globe className="h-4 w-4 text-blue-600" />
+              <span className="text-sm font-medium">Base URL</span>
             </div>
-            <code className="text-blue-700 font-mono text-sm">
+            <code className="text-blue-700 font-mono text-xs">
               https://api.example.com/v1
             </code>
           </div>
-
-          <div>
-            <h3 className="font-semibold mb-3">Authentication</h3>
-            <p className="text-gray-700 mb-4">
-              Include your API key in the Authorization header:
-            </p>
-            <CodeBlock
-              code={codeExamples.auth.header}
-              language="http"
-              title="Required Header"
-            />
+          <div className="bg-gray-50 rounded-lg p-4">
+            <div className="flex items-center gap-2 mb-2">
+              <Terminal className="h-4 w-4 text-green-600" />
+              <span className="text-sm font-medium">Authentication</span>
+            </div>
+            <code className="text-green-700 font-mono text-xs">
+              Authorization: Bearer YOUR_API_KEY
+            </code>
           </div>
         </div>
       </div>
 
-      <div className="grid gap-8 mb-12">
-        <div className="border rounded-xl p-8">
-          <div className="flex items-center gap-3 mb-6">
-            <Terminal className="h-6 w-6 text-green-600" />
-            <h2 className="text-xl font-semibold">cURL Examples</h2>
+      <div className="grid lg:grid-cols-2 gap-6 mb-8">
+        <div className="bg-white shadow rounded-lg p-6">
+          <div className="flex items-center gap-3 mb-4">
+            <Terminal className="h-5 w-5 text-green-600" />
+            <h3 className="text-lg font-medium text-gray-900">cURL Examples</h3>
           </div>
-
-          <div className="space-y-6">
+          <div className="space-y-4">
             <div>
-              <h3 className="font-medium mb-3">GET Request</h3>
+              <h4 className="text-sm font-medium mb-2">GET Request</h4>
               <CodeBlock
                 code={codeExamples.curl.get}
                 language="bash"
@@ -64,7 +64,7 @@ export function Docs() {
               />
             </div>
             <div>
-              <h3 className="font-medium mb-3">POST Request</h3>
+              <h4 className="text-sm font-medium mb-2">POST Request</h4>
               <CodeBlock
                 code={codeExamples.curl.post}
                 language="bash"
@@ -74,15 +74,16 @@ export function Docs() {
           </div>
         </div>
 
-        <div className="border rounded-xl p-8">
-          <div className="flex items-center gap-3 mb-6">
-            <Code className="h-6 w-6 text-yellow-600" />
-            <h2 className="text-xl font-semibold">JavaScript / Node.js</h2>
+        <div className="bg-white shadow rounded-lg p-6">
+          <div className="flex items-center gap-3 mb-4">
+            <Code className="h-5 w-5 text-yellow-600" />
+            <h3 className="text-lg font-medium text-gray-900">
+              JavaScript / Node.js
+            </h3>
           </div>
-
-          <div className="space-y-6">
+          <div className="space-y-4">
             <div>
-              <h3 className="font-medium mb-3">Installation</h3>
+              <h4 className="text-sm font-medium mb-2">Installation</h4>
               <CodeBlock
                 code={codeExamples.install.npm}
                 language="bash"
@@ -90,7 +91,7 @@ export function Docs() {
               />
             </div>
             <div>
-              <h3 className="font-medium mb-3">Example Code</h3>
+              <h4 className="text-sm font-medium mb-2">Example Code</h4>
               <CodeBlock
                 code={codeExamples.javascript}
                 language="javascript"
@@ -100,15 +101,14 @@ export function Docs() {
           </div>
         </div>
 
-        <div className="border rounded-xl p-8">
-          <div className="flex items-center gap-3 mb-6">
-            <Code className="h-6 w-6 text-blue-600" />
-            <h2 className="text-xl font-semibold">Python</h2>
+        <div className="bg-white shadow rounded-lg p-6">
+          <div className="flex items-center gap-3 mb-4">
+            <Code className="h-5 w-5 text-blue-600" />
+            <h3 className="text-lg font-medium text-gray-900">Python</h3>
           </div>
-
-          <div className="space-y-6">
+          <div className="space-y-4">
             <div>
-              <h3 className="font-medium mb-3">Installation</h3>
+              <h4 className="text-sm font-medium mb-2">Installation</h4>
               <CodeBlock
                 code={codeExamples.install.pip}
                 language="bash"
@@ -116,7 +116,7 @@ export function Docs() {
               />
             </div>
             <div>
-              <h3 className="font-medium mb-3">Example Code</h3>
+              <h4 className="text-sm font-medium mb-2">Example Code</h4>
               <CodeBlock
                 code={codeExamples.python}
                 language="python"
@@ -125,37 +125,38 @@ export function Docs() {
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="border rounded-xl p-8 mb-12">
-        <h2 className="text-xl font-semibold mb-6">Response Format</h2>
-        <p className="text-gray-600 mb-6">
-          All responses are returned in JSON format with consistent structure.
-        </p>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          <div>
-            <h3 className="font-medium mb-3">Success Response</h3>
-            <CodeBlock
-              code={codeExamples.responses.success}
-              language="json"
-              title="200 OK"
-            />
-          </div>
-          <div>
-            <h3 className="font-medium mb-3">Error Response</h3>
-            <CodeBlock
-              code={codeExamples.responses.error}
-              language="json"
-              title="401 Unauthorized"
-            />
+        <div className="bg-white shadow rounded-lg p-6">
+          <h3 className="text-lg font-medium text-gray-900 mb-4">
+            Response Format
+          </h3>
+          <p className="text-sm text-gray-600 mb-4">
+            All responses are returned in JSON format with consistent structure.
+          </p>
+          <div className="space-y-4">
+            <div>
+              <h4 className="text-sm font-medium mb-2">Success Response</h4>
+              <CodeBlock
+                code={codeExamples.responses.success}
+                language="json"
+                title="200 OK"
+              />
+            </div>
+            <div>
+              <h4 className="text-sm font-medium mb-2">Error Response</h4>
+              <CodeBlock
+                code={codeExamples.responses.error}
+                language="json"
+                title="401 Unauthorized"
+              />
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="border rounded-xl p-8 mb-12">
-        <h2 className="text-xl font-semibold mb-6">Rate Limits</h2>
-        <div className="grid md:grid-cols-2 gap-6">
+      <div className="bg-white shadow rounded-lg p-6">
+        <h3 className="text-lg font-medium text-gray-900 mb-4">Rate Limits</h3>
+        <div className="grid md:grid-cols-2 gap-4">
           {[
             {
               name: 'Free Tier',
@@ -170,8 +171,8 @@ export function Docs() {
               perMinute: '1,000',
             },
           ].map((rate, index) => (
-            <div key={index} className="bg-gray-50 rounded-lg p-6">
-              <h3 className="font-semibold mb-4">{rate.name}</h3>
+            <div key={index} className="bg-gray-50 rounded-lg p-4">
+              <h4 className="font-medium mb-3">{rate.name}</h4>
               <div className="space-y-2 text-sm text-gray-600">
                 <div className="flex justify-between">
                   <span>Daily requests:</span>
