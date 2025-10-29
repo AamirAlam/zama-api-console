@@ -12,5 +12,28 @@ export default defineConfig({
     screenshot: 'only-on-failure',
     trace: 'on-first-retry',
   },
-  projects: [{ name: 'chromium', use: { ...devices['Desktop Chrome'] } }],
+  projects: [
+    {
+      name: 'chromium',
+      use: {
+        ...devices['Desktop Chrome'],
+        // Set environment variables for tests
+        launchOptions: {
+          env: {
+            ...process.env,
+            VITE_NODE_ENV: 'development',
+          },
+        },
+      },
+    },
+  ],
+  // Start dev server before tests
+  webServer: {
+    command: 'npm run dev',
+    port: 5173,
+    reuseExistingServer: !process.env.CI,
+    env: {
+      VITE_NODE_ENV: 'development',
+    },
+  },
 })
