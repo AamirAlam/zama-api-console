@@ -2,14 +2,14 @@
 
 A sandbox console for API management and monitoring. This application provides a complete interface for managing API keys, monitoring usage analytics, and accessing documentation.
 
-## ✨ Features
+## Features
 
 - **Dashboard** - Overview with key metrics and quick actions
 - **API Key Management** - Create, regenerate, revoke, and manage API keys with local persistence
 - **Usage Analytics** - Interactive charts, time-based filtering, and detailed usage statistics
 - **Documentation** - Complete integration guides with copy-to-clipboard code snippets
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -44,7 +44,7 @@ A sandbox console for API management and monitoring. This application provides a
 4. **Open your browser**
    Navigate to `http://localhost:5173` to view the application.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **React 19** - Modern React with hooks
 - **TypeScript** - Type-safe development
@@ -53,7 +53,7 @@ A sandbox console for API management and monitoring. This application provides a
 - **Lucide React** - Beautiful icon library
 - ""Shadcn UI"" - Reusable UI components
 
-## 🚀 Deployment
+## Deployment
 
 ### Build for Production
 
@@ -62,6 +62,20 @@ npm run build
 ```
 
 The built files will be in the `dist` directory, ready for deployment to any static hosting service.
+
+## Testing
+
+### Unit Testing
+
+```bash
+npm run test:unit
+```
+
+### E2E Testing
+
+```bash
+npm run test:e2e
+```
 
 ### Future Improvements if I had more time
 
@@ -72,5 +86,3 @@ The built files will be in the `dist` directory, ready for deployment to any sta
 - **Usage History** - Add usage history for API keys
 
 ---
-
-Built with ❤️ using React, TypeScript, and Vite

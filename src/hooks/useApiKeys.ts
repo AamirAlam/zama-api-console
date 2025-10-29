@@ -1,3 +1,4 @@
+import { generateApiKey } from '@/lib/utils'
 import { useState, useEffect } from 'react'
 
 export interface ApiKey {
@@ -10,14 +11,6 @@ export interface ApiKey {
 }
 
 const API_KEYS_STORAGE_KEY = 'apiKeys'
-
-const generateApiKey = (): string => {
-  const prefix = 'sk_live_'
-  const randomPart =
-    Math.random().toString(36).substring(2, 15) +
-    Math.random().toString(36).substring(2, 15)
-  return prefix + randomPart
-}
 
 export function useApiKeys() {
   const [apiKeys, setApiKeys] = useState<ApiKey[]>([])
@@ -36,6 +29,7 @@ export function useApiKeys() {
           }
         }
       } catch (error) {
+        // eslint-disable-next-line no-console
         console.error('Error loading API keys:', error)
       } finally {
         setIsLoading(false)

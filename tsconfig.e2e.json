@@ -16,5 +16,10 @@
     "noFallthroughCasesInSwitch": true,
     "types": ["node", "@playwright/test"]
   },
-  "include": ["tests-e2e/**/*", "playwright.config.ts"]
+  "include": [
+    "tests-e2e/**/*",
+    "playwright.config.ts",
+    "src/**/__tests__/**/*",
+    "vitest.config.ts"
+  ]
 }
