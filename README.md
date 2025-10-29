@@ -54,7 +54,7 @@ pnpm dev
 
 ### Login Credentials
 
-Use any email/password combination to access the application (authentication is simulated for demo purposes).
+Use guest login button to access the application (authentication is simulated for demo purposes).
 
 ## Data & Synthetic Data Generation
 
@@ -187,7 +187,7 @@ npm run type-check
 - **Vite** - Fast build tool and dev server
 - **Tailwind CSS** - Utility-first CSS framework
 - **Lucide React** - Beautiful icon library
-- ""Shadcn UI"" - Reusable UI components
+- **Shadcn UI** - Reusable UI components
 
 ## Deployment
 
