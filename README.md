@@ -2,6 +2,10 @@
 
 A sandbox console for API management and monitoring. This application provides a complete interface for managing API keys, monitoring usage analytics, and accessing documentation.
 
+# Project Demo
+
+Click on the loom video to watch project demo : https://www.loom.com/share/7bb98bf1e33b4319b22245735c864cf3
+
 ## Features
 
 - **Dashboard** - Overview with key metrics and quick actions
